@@ -10,7 +10,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 /**
- * 替代web.xml文件
+ * 替代web.xml文件 第二次
  * @author snake
  *
  */
