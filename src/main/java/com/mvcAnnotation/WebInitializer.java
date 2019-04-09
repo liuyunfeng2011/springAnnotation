@@ -10,7 +10,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 /**
- * 替代web.xml文件 第二次
+ * 替代web.xml文件
  * @author snake
  *
  */
@@ -19,6 +19,7 @@ public class WebInitializer implements WebApplicationInitializer{
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		// TODO Auto-generated method stub
 		AnnotationConfigWebApplicationContext ctx=new AnnotationConfigWebApplicationContext();
+		//Spring mvc的配置文件
 		ctx.register(Config.class);
 		ctx.setServletContext(servletContext);
 		Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
