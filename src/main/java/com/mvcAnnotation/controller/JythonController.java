@@ -27,7 +27,7 @@ import com.mvcAnnotation.service.HelloService;
  *
  */
 @Controller
-public class TestController {
+public class JythonController {
 	@Resource(name="helloService")
 	private HelloService helloService;
 	  @ResponseBody
