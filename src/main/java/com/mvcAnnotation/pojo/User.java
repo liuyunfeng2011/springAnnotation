@@ -24,5 +24,9 @@ public class User implements Serializable{
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
 	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userName=" + userName + ", userPwd=" + userPwd + "]";
+	}
 	
 }

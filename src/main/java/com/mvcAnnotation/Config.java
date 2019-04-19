@@ -1,7 +1,6 @@
 package com.mvcAnnotation;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +15,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @ComponentScan("com.mvcAnnotation")
 //@EnableWebMvc  这个类导入了DelegatingWebMvcConfiguration 而这个类extends WebMvcConfigurationSupport 屏蔽了我们自己集成的WebMvcConfigurationSupport
 public class Config extends WebMvcConfigurationSupport{
-	 private static final Logger logger = LoggerFactory.getLogger(Config.class); 
+	 private static final Logger logger = Logger.getLogger(Config.class); 
 	@Bean
 	public UrlBasedViewResolver setupViewResolver() {
 		logger.info("UrlBasedViewResolver");  

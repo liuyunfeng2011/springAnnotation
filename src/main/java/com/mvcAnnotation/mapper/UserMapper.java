@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.mvcAnnotation.pojo.User;
 
 public interface UserMapper {
-	@Select(" select * from enterUser where enter_email=#{userName} and enter_pass=#{pwd}")
+	@Select(" select * from enterUsers where enter_email=#{userName} and enter_pass=#{pwd}")
 	@Results({
 		@Result(column="enter_id", property="userId", jdbcType=JdbcType.INTEGER, id=true),
          @Result(property = "userName", column = "enter_email",jdbcType=JdbcType.VARCHAR),

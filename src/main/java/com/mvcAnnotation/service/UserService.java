@@ -7,5 +7,5 @@ public interface UserService {
 	 * 用户登录
 	 * @return
 	 */
-	public User login(String userName,String pwd);
+	public User login(String userName,String pwd)throws Exception;
 }
