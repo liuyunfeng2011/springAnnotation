@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.xhtmlrenderer.pdf.ITextFontResolver;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
+import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.BaseFont;
 
 import jdk.nashorn.internal.ir.annotations.Ignore;
@@ -22,8 +23,10 @@ public class HelloServiceTest {
 	@Test
 	public void testGetHello() throws IOException {
 			String disrPath="/Users/yexianyong/Desktop/";
-			String htmlFile = "/Users/yexianyong/Desktop/tem.html";
-	        String pdfFile = "/Users/yexianyong/Desktop/testoone2.pdf";
+//			String htmlFile = "/Users/yexianyong/Desktop/tem.html";
+//	        String pdfFile = "/Users/yexianyong/Desktop/testoone2.pdf";
+			String htmlFile = "/Users/yexianyong/Desktop/CV.html";
+	        String pdfFile = "/Users/yexianyong/Desktop/testoone1.pdf";
 	        String templateContent = "";
 	        FileInputStream fileinputstream = new FileInputStream(htmlFile);// 读取模板文件
 	        int lenght = fileinputstream.available();
@@ -32,7 +35,7 @@ public class HelloServiceTest {
             fileinputstream.close();
             templateContent = new String(bytes);
             System.out.print(templateContent);
-            templateContent = templateContent.replaceAll("gongsiname", "<div class='test'>第一家大鸡排</div>");
+//            templateContent = templateContent.replaceAll("gongsiname", "<div class='test'>第一家大鸡排</div>");
             System.out.print(templateContent);
             
             
@@ -72,7 +75,6 @@ public class HelloServiceTest {
 		System.out.println(os);
 		ITextRenderer renderer = new ITextRenderer();
 		renderer.setDocument(url);
-
 		// step 3 解决中文支持
 		ITextFontResolver fontResolver = renderer.getFontResolver();
 		fontResolver.addFont("/Users/yexianyong/Desktop/simsun.ttc", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
